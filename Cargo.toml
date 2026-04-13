@@ -1,0 +1,10 @@
+[package]
+name = "binary_patricia_merkle_trie"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+blake2b_simd = "1.0.4"
+clap = { version = "4.6.0", features = ["derive"] }
+hex = "0.4.3"
+rocksdb = "0.24.0"
