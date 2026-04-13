@@ -18,29 +18,6 @@ Unlike Substrate's current radix-16 Modified Merkle Patricia Trie (where each no
   - NOMT native -- direct comparison using NOMT's own sparse binary merkle trie
 - **CLI benchmark tool** with colored output comparing all backends
 
-## Architecture
-
-```
-src/
-  lib.rs              -- public re-exports
-  main.rs             -- CLI benchmark tool (clap)
-  trie/
-    mod.rs            -- module declarations
-    bits.rs           -- BitVec for key bit decomposition
-    core.rs           -- BinaryPatriciaTrie<DB: TrieDB> (insert, get, delete, proofs)
-    db.rs             -- TrieDB trait
-    encoding.rs       -- varint (LEB128) encoding
-    error.rs          -- TrieError
-    memory_db.rs      -- MemoryDB (in-memory backend)
-    node.rs           -- Node types + deterministic binary encoding
-    nomt_db.rs        -- NomtTrieDB (NOMT as storage backend)
-    proof.rs          -- StorageProof + verify_proof
-    rocks_db.rs       -- RocksTrieDB (RocksDB backend)
-tests/
-    trie_tests.rs     -- 25 integration tests (memory backend)
-    rocks_db_tests.rs -- 6 integration tests (RocksDB backend)
-```
-
 ## Node Encoding
 
 ```
