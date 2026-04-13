@@ -6,4 +6,5 @@ pub mod error;
 pub mod memory_db;
 pub mod node;
 pub mod proof;
+pub mod nomt_db;
 pub mod rocks_db;
